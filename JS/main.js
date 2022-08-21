@@ -11,6 +11,9 @@ allLinks.forEach((e)=>{
     e.onclick=function(){
         allLinks.forEach((e)=>e.classList.remove("active"))
         e.classList.add("active");
+        //Remove class Show from NavBar
+        navbar.classList.remove("show");
+        menu.classList.remove("fa-times");
     }
 })
 
@@ -58,3 +61,9 @@ function imgeClick(imges,big){
     })
 }
 //End featured Sections
+
+
+let date=new Date();
+let year=document.querySelector(".right .year");
+
+year.innerHTML=date.getFullYear();
